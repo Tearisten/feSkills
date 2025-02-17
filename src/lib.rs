@@ -198,11 +198,23 @@ pub fn CheckForNewSkills(unit: &Unit, proc: &ProcInst, _method_info: u64)
             {
                 if y.0 <= (unit.level + unit.internal_level as u8).into()
                 {
-                    if !IsExistInEquipSkillPool(unit, y.1.clone().into(), _method_info) && IsInheritanceEnable(unit,SkillData::get(y.1.clone().to_string()).unwrap(), _method_info)
+                    if let Some(sk) = SkillData::get(y.1.clone().to_string())
                     {
-                        AddToEquipSkillPool(unit, Il2CppString::new(y.1.clone()), _method_info);
-                        ShowSkillPopup(y.1.clone().into(), proc);
-                        return; // can only do one skill per level up or else bad things happen
+
+                        if !IsExistInEquipSkillPool(unit, y.1.clone().into(), _method_info) && IsInheritanceEnable(unit, sk, _method_info)
+                        {
+                            AddToEquipSkillPool(unit, Il2CppString::new(y.1.clone()), _method_info);
+                            ShowSkillPopup(y.1.clone().into(), proc);
+                            return; // can only do one skill per level up or else bad things happen
+                        }
+                    }
+                    else
+                    {
+                            skyline::error::show_error(
+                                69,
+                                "Inherit new skill failed due to bad skill id.\n{}\0",
+                                &y.1.clone().to_string()
+                            );
                     }
                 }
             }
@@ -214,27 +226,27 @@ pub fn ShowSkillPopup(string: &Il2CppString, proc: &ProcInst)
 {
     if let Some(skill) = SkillData::get(&string.to_string()){
         let sid_substring: &str = &skill.sid.to_string()[4..];
-        // let tag: &Il2CppObject<SystemString> = Mess::create_sprite_tag(1, sid_substring.into());
-        let val: &str = &("<sprite=\"Skill\" name=\"".to_owned()+sid_substring+"\">");
-        let tag: &Il2CppObject<SystemString> = val.to_string().into();
+        let tag: &Il2CppObject<SystemString> = Mess::create_sprite_tag(1, sid_substring.into());
+        // let val: &str = &("<sprite=\"Skill\" name=\"".to_owned()+sid_substring+"\">");
+        // let tag: &Il2CppObject<SystemString> = val.to_string().into();
         Mess::set_argument(0, tag);
         let skill_name: &mut Il2CppObject<SystemString> = Mess::get(skill.name.unwrap());
         Mess::set_argument(1,skill_name.to_string());
         let mut message: &'static mut Il2CppObject<SystemString> = Mess::get("MID_Hub_Inheritance_Skill_Finish");
 
 
-        let err_msg = format!(
-            "{}\n{}\n{}\n{}\0",
-            skill_name,
-            message,
-            sid_substring,
-            tag
-        );
-        skyline::error::show_error(
-            69,
-            "Inherit new skill.\n\0",
-            err_msg.as_str(),
-        );
+        // let err_msg = format!(
+        //     "{}\n{}\n{}\n{}\0",
+        //     skill_name,
+        //     message,
+        //     sid_substring,
+        //     tag
+        // );
+        // skyline::error::show_error(
+        //     69,
+        //     "Inherit new skill.\n\0",
+        //     err_msg.as_str(),
+        // );
         GameMessage::create_key_wait(proc,message.to_string());
     }
 }
