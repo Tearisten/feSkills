@@ -3,6 +3,21 @@
 version = 4
 
 [[package]]
+name = "PersonalSkillsEnhanced"
+version = "0.1.0"
+dependencies = [
+ "engage",
+ "lazy_static",
+ "libc-nnsdk 0.3.0",
+ "miniserde",
+ "num",
+ "serde",
+ "skyline 0.2.1 (git+https://github.com/ultimate-research/skyline-rs?rev=ba4706a6faa1a705b37cc962826b0426d72bf604)",
+ "toml",
+ "unity",
+]
+
+[[package]]
 name = "arrayvec"
 version = "0.7.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -16,31 +31,9 @@ checksum = "ace50bade8e6234aa140d9a2f552bbee1db4d353f69b8217bc503490fc1a9f26"
 
 [[package]]
 name = "bitflags"
-version = "2.6.0"
+version = "2.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b048fb63fd8b5923fc5aa7b340d8e156aec7ec02f0c78fa8a6ddc2613f6f71de"
-
-[[package]]
-name = "cobapi"
-version = "0.3.0"
-source = "git+https://github.com/DivineDragonFanClub/cobapi?rev=cc1080aa35fb1e4f7c465da20ac6bb66b82d7c57#cc1080aa35fb1e4f7c465da20ac6bb66b82d7c57"
-dependencies = [
- "engage 0.6.5 (git+https://github.com/DivineDragonFanClub/engage)",
-]
-
-[[package]]
-name = "convert"
-version = "0.1.0"
-dependencies = [
- "cobapi",
- "engage 0.6.5 (git+https://github.com/DivineDragonFanClub/engage?rev=c14109b787d6b18be600ebc2c796ba35f4f15504)",
- "libc-nnsdk 0.3.0 (git+https://github.com/ultimate-research/libc-nnsdk?rev=c83d92a930852db6028442dbba930aa14012172c)",
- "num",
- "serde",
- "skyline 0.2.1 (git+https://github.com/ultimate-research/skyline-rs?rev=ba4706a6faa1a705b37cc962826b0426d72bf604)",
- "toml",
- "unity",
-]
+checksum = "8f68f53c83ab957f72c32642f3868eec03eb974d1fb82e453128456482613d36"
 
 [[package]]
 name = "deluxe"
@@ -52,7 +45,7 @@ dependencies = [
  "deluxe-macros",
  "once_cell",
  "proc-macro2",
- "syn 2.0.87",
+ "syn 2.0.98",
 ]
 
 [[package]]
@@ -65,7 +58,7 @@ dependencies = [
  "proc-macro2",
  "quote",
  "strsim",
- "syn 2.0.87",
+ "syn 2.0.98",
 ]
 
 [[package]]
@@ -80,26 +73,13 @@ dependencies = [
  "proc-macro-crate",
  "proc-macro2",
  "quote",
- "syn 2.0.87",
+ "syn 2.0.98",
 ]
 
 [[package]]
 name = "engage"
-version = "0.6.5"
-source = "git+https://github.com/DivineDragonFanClub/engage?rev=c14109b787d6b18be600ebc2c796ba35f4f15504#c14109b787d6b18be600ebc2c796ba35f4f15504"
-dependencies = [
- "bitflags",
- "lazysimd",
- "modular-bitfield",
- "once_cell",
- "skyline 0.2.1 (git+https://github.com/Raytwo/skyline-rs?branch=preview)",
- "unity",
-]
-
-[[package]]
-name = "engage"
-version = "0.6.5"
-source = "git+https://github.com/DivineDragonFanClub/engage#c14109b787d6b18be600ebc2c796ba35f4f15504"
+version = "0.10.0"
+source = "git+https://github.com/DivineDragonFanClub/engage?rev=c192434d5c7b313f400245a0d08c65252ce3b1d7#c192434d5c7b313f400245a0d08c65252ce3b1d7"
 dependencies = [
  "bitflags",
  "lazysimd",
@@ -111,15 +91,15 @@ dependencies = [
 
 [[package]]
 name = "equivalent"
-version = "1.0.1"
+version = "1.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5443807d6dff69373d433ab9ef5378ad8df50ca6298caf15de6e52e24aaf54d5"
+checksum = "877a4ace8713b0bcf2a4e7eec82529c029f1d0619886d18145fea96c3ffe5c0f"
 
 [[package]]
 name = "hashbrown"
-version = "0.15.1"
+version = "0.15.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3a9bfc1af68b1726ea47d3d5109de126281def866b33970e10fbab11b5dafab3"
+checksum = "bf151400ff0baff5465007dd2f3e717f3fe502074ca563069ce3a6629d07b289"
 
 [[package]]
 name = "heck"
@@ -135,13 +115,19 @@ checksum = "cb56e1aa765b4b4f3aadfab769793b7087bb03a4ea4920644a6d238e2df5b9ed"
 
 [[package]]
 name = "indexmap"
-version = "2.6.0"
+version = "2.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "707907fe3c25f5424cce2cb7e1cbcafee6bdbe735ca90ef77c29e84591e5b9da"
+checksum = "8c9c992b02b5b4c94ea26e32fe5bccb7aa7d9f390ab5c1221ff895bc7ea8b652"
 dependencies = [
  "equivalent",
  "hashbrown",
 ]
+
+[[package]]
+name = "itoa"
+version = "1.0.14"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d75a2a4b1b190afb6f5425f10f6a8f959d2ea0b9c2b1d79553551850539e4674"
 
 [[package]]
 name = "lazy_static"
@@ -165,7 +151,7 @@ source = "git+https://github.com/Raytwo/lazysimd#3effca0fd2ebcd95d9b4113f4290e58
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.87",
+ "syn 2.0.98",
 ]
 
 [[package]]
@@ -177,13 +163,13 @@ checksum = "6823e4bff6dee10a75dfee95afe1c5a7f93a1b99a20013663e0cb04b3a64f867"
 [[package]]
 name = "libc-nnsdk"
 version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "99102e4669e461772fcdfeb04ce9dec03c5fade700a3c12b1a4c2a27d97e9b68"
+source = "git+https://github.com/ultimate-research/libc-nnsdk?rev=c83d92a930852db6028442dbba930aa14012172c#c83d92a930852db6028442dbba930aa14012172c"
 
 [[package]]
 name = "libc-nnsdk"
-version = "0.3.0"
-source = "git+https://github.com/ultimate-research/libc-nnsdk?rev=c83d92a930852db6028442dbba930aa14012172c#c83d92a930852db6028442dbba930aa14012172c"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ece4a9a361bf75974e2c18b719e8fd501e4e336d7a5db22d077c4f2367a94be9"
 
 [[package]]
 name = "memchr"
@@ -198,6 +184,28 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d61c719bcfbcf5d62b3a09efa6088de8c54bc0bfcd3ea7ae39fcc186108b8de1"
 dependencies = [
  "autocfg",
+]
+
+[[package]]
+name = "mini-internal"
+version = "0.1.41"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "07b7f1340a7f0d2f89755aac4096f1c55352bfcb95cb8f351d6fcefa18df474f"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 2.0.98",
+]
+
+[[package]]
+name = "miniserde"
+version = "0.1.41"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "625208b7bc90255fe6d99338041880bf48a3049166f46fbefbd4e9b0478c0b66"
+dependencies = [
+ "itoa",
+ "mini-internal",
+ "ryu",
 ]
 
 [[package]]
@@ -223,10 +231,10 @@ dependencies = [
 
 [[package]]
 name = "nnsdk"
-version = "0.3.0"
-source = "git+https://github.com/ultimate-research/nnsdk-rs#602e621750b8754a15c63ca729f13482aa36dfc9"
+version = "0.4.0"
+source = "git+https://github.com/ultimate-research/nnsdk-rs#9c13b5262f951695d2194a31dd9a127356eae5ee"
 dependencies = [
- "libc-nnsdk 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc-nnsdk 0.4.0",
 ]
 
 [[package]]
@@ -304,9 +312,9 @@ dependencies = [
 
 [[package]]
 name = "once_cell"
-version = "1.20.2"
+version = "1.20.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1261fe7e33c73b354eab43b1273a57c8f967d0391e80353e51f764ac02cf6775"
+checksum = "945462a4b81e43c4e3ba96bd7b49d834c6f61198356aa858733bc4acf3cbe62e"
 
 [[package]]
 name = "proc-macro-crate"
@@ -320,40 +328,46 @@ dependencies = [
 
 [[package]]
 name = "proc-macro2"
-version = "1.0.89"
+version = "1.0.93"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f139b0662de085916d1fb67d2b4169d1addddda1919e696f3252b740b629986e"
+checksum = "60946a68e5f9d28b0dc1c21bb8a97ee7d018a8b322fa57838ba31cc878e22d99"
 dependencies = [
  "unicode-ident",
 ]
 
 [[package]]
 name = "quote"
-version = "1.0.37"
+version = "1.0.38"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b5b9d34b8991d19d98081b46eacdd8eb58c6f2b201139f7c5f643cc155a633af"
+checksum = "0e4dccaaaf89514f546c693ddc140f729f958c247918a13380cccc6078391acc"
 dependencies = [
  "proc-macro2",
 ]
 
 [[package]]
-name = "serde"
-version = "1.0.215"
+name = "ryu"
+version = "1.0.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6513c1ad0b11a9376da888e3e0baa0077f1aed55c17f50e7b2397136129fb88f"
+checksum = "6ea1a2d0a644769cc99faa24c3ad26b379b786fe7c36fd3c546254801650e6dd"
+
+[[package]]
+name = "serde"
+version = "1.0.217"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "02fc4265df13d6fa1d00ecff087228cc0a2b5f3c0e87e258d8b94a156e984c70"
 dependencies = [
  "serde_derive",
 ]
 
 [[package]]
 name = "serde_derive"
-version = "1.0.215"
+version = "1.0.217"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ad1e866f866923f252f05c889987993144fb74e722403468a4ebd70c3cd756c0"
+checksum = "5a9bf7cf98d04a2b28aead066b7496853d4779c9cc183c440dbac457641e19a0"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.87",
+ "syn 2.0.98",
 ]
 
 [[package]]
@@ -432,9 +446,9 @@ dependencies = [
 
 [[package]]
 name = "syn"
-version = "2.0.87"
+version = "2.0.98"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "25aa4ce346d03a6dcd68dd8b4010bcb74e54e62c90c573f394c46eae99aba32d"
+checksum = "36147f1a48ae0ec2b5b3bc5b537d267457555a10dc06f3dbc8cb11ba3006d3b1"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -458,19 +472,19 @@ checksum = "4fee6c4efc90059e10f81e6d42c60a18f76588c3d74cb83a0b242a2b6c7504c1"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn 2.0.87",
+ "syn 2.0.98",
 ]
 
 [[package]]
 name = "toml"
-version = "0.8.19"
+version = "0.8.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a1ed1f98e3fdc28d6d910e6737ae6ab1a93bf1985935a1193e68f93eeb68d24e"
+checksum = "cd87a5cdd6ffab733b2f74bc4fd7ee5fff6634124999ac278c35fc78c6120148"
 dependencies = [
  "serde",
  "serde_spanned",
  "toml_datetime",
- "toml_edit 0.22.22",
+ "toml_edit 0.22.24",
 ]
 
 [[package]]
@@ -495,27 +509,27 @@ dependencies = [
 
 [[package]]
 name = "toml_edit"
-version = "0.22.22"
+version = "0.22.24"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4ae48d6208a266e853d946088ed816055e556cc6028c5e8e2b84d9fa5dd7c7f5"
+checksum = "17b4795ff5edd201c7cd6dca065ae59972ce77d1b80fa0a84d94950ece7d1474"
 dependencies = [
  "indexmap",
  "serde",
  "serde_spanned",
  "toml_datetime",
- "winnow 0.6.20",
+ "winnow 0.7.2",
 ]
 
 [[package]]
 name = "unicode-ident"
-version = "1.0.13"
+version = "1.0.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e91b56cd4cadaeb79bbf1a5645f6b4f8dc5bde8834ad5894a8db35fda9efa1fe"
+checksum = "a210d160f08b701c8721ba1c726c11662f877ea6b7094007e1ca9a1041945034"
 
 [[package]]
 name = "unity"
 version = "0.3.0"
-source = "git+https://github.com/DivineDragonFanClub/unity#0dcbab46ecb6d9526ba92a304b771009b8441186"
+source = "git+https://github.com/DivineDragonFanClub/unity#3e101c93f5485367ce4864f91baf3fdb8c6e7bed"
 dependencies = [
  "lazysimd",
  "memoffset",
@@ -527,13 +541,13 @@ dependencies = [
 [[package]]
 name = "unity-macro"
 version = "0.1.0"
-source = "git+https://github.com/DivineDragonFanClub/unity#0dcbab46ecb6d9526ba92a304b771009b8441186"
+source = "git+https://github.com/DivineDragonFanClub/unity#3e101c93f5485367ce4864f91baf3fdb8c6e7bed"
 dependencies = [
  "deluxe",
  "proc-macro-crate",
  "proc-macro2",
  "quote",
- "syn 2.0.87",
+ "syn 2.0.98",
 ]
 
 [[package]]
@@ -547,9 +561,9 @@ dependencies = [
 
 [[package]]
 name = "winnow"
-version = "0.6.20"
+version = "0.7.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "36c1fec1a2bb5866f07c25f68c26e565c4c200aebb96d7e55710c19d3e8ac49b"
+checksum = "59690dea168f2198d1a3b0cac23b8063efcd11012f10ae4698f284808c8ef603"
 dependencies = [
  "memchr",
 ]

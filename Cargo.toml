@@ -1,5 +1,5 @@
 [package]
-name = "convert"
+name = "PersonalSkillsEnhanced"
 version = "0.1.0"
 authors = []
 edition = "2021"
@@ -14,11 +14,12 @@ crate-type = ["cdylib"]
 skyline = {git = "https://github.com/ultimate-research/skyline-rs", rev = "ba4706a6faa1a705b37cc962826b0426d72bf604"}
 libc-nnsdk = { git = "https://github.com/ultimate-research/libc-nnsdk", rev = "c83d92a930852db6028442dbba930aa14012172c"}
 unity = { git = "https://github.com/DivineDragonFanClub/unity"}
-engage = { git = "https://github.com/DivineDragonFanClub/engage", rev = "c14109b787d6b18be600ebc2c796ba35f4f15504" }
-cobapi = {git = "https://github.com/DivineDragonFanClub/cobapi", rev = "cc1080aa35fb1e4f7c465da20ac6bb66b82d7c57" }
+engage = { git = "https://github.com/DivineDragonFanClub/engage", rev = "c192434d5c7b313f400245a0d08c65252ce3b1d7"}
 serde = { version = "1.0", features = ["derive"] }
 toml = "0.8.0"
 num = "0.4.1"
+miniserde = "0.1.41"
+lazy_static = "1.4.0"
 
 [profile.dev]
 panic = "abort"
