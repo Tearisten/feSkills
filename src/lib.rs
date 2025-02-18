@@ -198,23 +198,70 @@ pub fn CheckForNewSkills(unit: &Unit, proc: &ProcInst, _method_info: u64)
             {
                 if y.0 <= (unit.level + unit.internal_level as u8).into()
                 {
+                    // skyline::error::show_error(
+                    //     69,
+                    //     "test0\n{}\0",
+                    //     &y.1.clone().to_string()
+                    // );
                     if let Some(sk) = SkillData::get(y.1.clone().to_string())
                     {
-
-                        if !IsExistInEquipSkillPool(unit, y.1.clone().into(), _method_info) && IsInheritanceEnable(unit, sk, _method_info)
+                        // skyline::error::show_error(
+                        //     69,
+                        //     "test1\n{}\0",
+                        //     &y.1.clone().to_string()
+                        // );
+                        if !IsExistInEquipSkillPool(unit, y.1.clone().into(), _method_info) //&& IsInheritanceEnable(unit, sk, _method_info)
                         {
-                            AddToEquipSkillPool(unit, Il2CppString::new(y.1.clone()), _method_info);
-                            ShowSkillPopup(y.1.clone().into(), proc);
-                            return; // can only do one skill per level up or else bad things happen
+                            // skyline::error::show_error(
+                            //     69,
+                            //     "test2\n{}\0",
+                            //     &y.1.clone().to_string()
+                            // );
+                            // if IsInheritanceEnable(unit, sk, _method_info)
+                            let mut x = 1;
+                            let mut foundBigger = false;
+                            let mut foundNext = false;
+                            while !foundNext
+                            {
+                                if let Some(child) = SkillData::try_index_get(sk.parent.index + x)
+                                {
+                                    if child.get_priority() != 0
+                                    {
+                                        if IsExistInEquipSkillPool(unit, child.sid, _method_info)
+                                        {
+                                            foundBigger = true;
+                                            foundNext = true;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        foundNext = true;
+                                    }
+
+                                }
+                                else
+                                {
+                                    foundNext = true;
+                                }
+ 
+                                x += 1;
+                            }
+                            if !foundBigger
+                            {
+                                AddToEquipSkillPool(unit, Il2CppString::new(y.1.clone()), _method_info);
+                                ShowSkillPopup(y.1.clone().into(), proc);
+                                return; // can only do one skill per level up or else bad things happen
+                            }
+
                         }
                     }
                     else
                     {
-                            skyline::error::show_error(
-                                69,
-                                "Inherit new skill failed due to bad skill id.\n{}\0",
-                                &y.1.clone().to_string()
-                            );
+                        skyline::error::show_error(
+                            69,
+                            "Inherit new skill failed due to bad skill id.\n{}\0",
+                            &y.1.clone().to_string()
+                        );
                     }
                 }
             }
