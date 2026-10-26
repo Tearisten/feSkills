@@ -1,0 +1,252 @@
+{
+    "vals":
+        [
+            {
+                "pid"       : "PID_リュール",
+                "english"   : "Alear",
+                "skills"    : [[3, "SID_LookoutDuty"], [7, "SID_RunningCoach"], [12, "SID_IronWill"], [20, "SID_Opportunity"]]
+            },
+
+            {
+                "pid"       : "PID_ヴァンドレ",
+                "english"   : "Vandre",
+                "skills"    : [[1, "SID_OldDog"], [17, "SID_TacticalGenius"], [18, "SID_PhoenixHeart"]]
+            },
+            
+            {
+                "pid"       : "PID_クラン",
+                "english"   : "Clanne",
+                "skills"    : [[1, "SID_WindRunner"], [4, "SID_Surgebinding"], [8, "SID_SonOfHonor"]]
+            },
+
+            {
+                "pid"       : "PID_フラン",
+                "english"   : "Framme",
+                "skills"    : [[1, "SID_TruthWatcher"], [3, "SID_Progression"], [9, "SID_DaughterOfHonor"]]
+            },
+            
+            {
+                "pid"       : "PID_アルフレッド",
+                "english"   : "Alfred",
+                "skills"    : [[1, "SID_StrengthLeech"], [7, "SID_Propulsion"], [14, "SID_Confidence"]] 
+            },
+
+            {
+                "pid"       : "PID_エーティエ",
+                "english"   : "Etie",
+                "skills"    : [[1, "SID_PerfectRange"], [6, "SID_BowSnap"], [13, "SID_TrenchWarfare"]]
+            },
+            
+            {
+                "pid"       : "PID_ブシュロン",
+                "english"   : "Boucheron",
+                "skills"    : [[1, "SID_Inspired"], [6, "SID_DownSmash"], [10, "SID_Reliable"]]
+            },
+            
+            {
+                "pid"       : "PID_セリーヌ",
+                "english"   : "Celine",
+                "skills"    : [[1, "SID_UnicornOverlord"], [8, "SID_Shortstack"], [15, "SID_MorningBloom"]]
+            },
+            
+            {
+                "pid"       : "PID_クロエ",
+                "english"   : "Chloe",
+                "skills"    : [[1, "SID_Instinct"], [10, "SID_NeedlesEdge"], [17, "SID_HeartOfSteel"]]
+            },
+
+            {
+                "pid"       : "PID_ルイ",
+                "english"   : "Louis",
+                "skills"    : [[1, "SID_Castle"], [9, "SID_ObviousTarget"], [15, "SID_HoldSteady"]]
+            },
+
+            {
+                "pid"       : "PID_ジャン",
+                "english"   : "Jean",
+                "skills"    : [[1, "SID_JumpBack"], [12, "SID_SelfDependant"], [25, "SID_BloodOfHeros"]]
+            },
+            
+            {
+                "pid"       : "PID_ユナカ",
+                "english"   : "Yunaka",
+                "skills"    : [[1, "SID_PapayaBreak"], [10, "SID_LonelyWork"], [16, "SID_Zappy"]]
+            },
+
+            {
+                "pid"       : "PID_アンナ",
+                "english"   : "Anna",
+                "skills"    : [[1, "SID_Sorcerer"], [10, "SID_BooksAreForNerds"], [20, "SID_Overflow"]]
+            },
+            
+            {
+                "pid"       : "PID_スタルーク",
+                "english"   : "Alcryst",
+                "skills"    : [[1, "SID_PowerDraw"], [15, "SID_Perfection"], [23, "SID_SiegeLord"]]
+            },
+            
+            {
+                "pid"       : "PID_シトリニカ",
+                "english"   : "Citrinne",
+                "skills"    : [[1, "SID_ArtilleryMage"], [12, "SID_Kaboom"], [19, "SID_Violence"]]
+            },
+            
+            {
+                "pid"       : "PID_ラピス",
+                "english"   : "Lapis",
+                "skills"    : [[1, "SID_Praiseworthy"], [13, "SID_SmoothSailor"], [16, "SID_Cyclone"]]
+            },
+            
+            {
+                "pid"       : "PID_ディアマンド",
+                "english"   : "Diamant",
+                "skills"    : [[1, "SID_Scrappy"], [15, "SID_WeaponMaster"], [23, "SID_ToTheDeath"]]
+            },
+            
+            {
+                "pid"       : "PID_アンバー",
+                "english"   : "Amber",
+                "skills"    : [[1, "SID_HerosJourney"], [14, "SID_AdventureAwaits"], [17, "SID_Worldbringer"]]
+            },
+            
+            {
+                "pid"       : "PID_ジェーデ",
+                "english"   : "Jade",
+                "skills"    : [[1, "SID_Dedication"], [15, "SID_Equilibrium"], [20, "SID_OnDuty"]]
+            },
+            
+            {
+                "pid"       : "PID_アイビー",
+                "english"   : "Ivy",
+                "skills"    : [[1, "SID_Privilege"], [21, "SID_Bloodline"], [25, "SID_SoulOfFlame"]]
+            },
+            
+            {
+                "pid"       : "PID_カゲツ",
+                "english"   : "Kagetsu",
+                "skills"    : [[1, "SID_TwinSlash"], [20, "SID_NiceTry"], [25, "SID_SorryKid"]]
+            },
+            
+            {
+                "pid"       : "PID_ゼルコバ",
+                "english"   : "Zelkov",
+                "skills"    : [[1, "SID_CloseAndPersonal"], [17, "SID_Shadow"], [22, "SID_Guillotine"]]
+            },
+
+            {
+                "pid"       : "PID_フォガート",
+                "english"   : "Fogado",
+                "skills"    : [[1, "SID_ALittleCloser"], [21, "SID_Rose"], [26, "SID_Dreams"]]
+            },
+
+            {
+                "pid"       : "PID_パンドロ",
+                "english"   : "Pandreo",
+                "skills"    : [[1, "SID_Greetings"], [18, "SID_Closer"], [23, "SID_Farewell"]]
+            },
+            
+            {
+                "pid"       : "PID_ボネ",
+                "english"   : "Bunet",
+                "skills"    : [[1, "SID_FullArmor"], [18, "SID_DefensivePosture"], [22, "SID_VictoryStew"]]
+            },
+            
+            {
+                "pid"       : "PID_ミスティラ",
+                "english"   : "Timerra",
+                "skills"    : [[1, "SID_DisasterPrep"], [22, "SID_PracticePerfect"], [27, "SID_HonorBattle"]]
+            },
+            
+            {
+                "pid"       : "PID_パネトネ",
+                "english"   : "Panette",
+                "skills"    : [[1, "SID_ZenZone"], [20, "SID_LockIn"], [28, "SID_Commitment"]]
+            },
+            
+            {
+                "pid"       : "PID_メリン",
+                "english"   : "Merrin",
+                "skills"    : [[1, "SID_CanineAgility"], [1, "SID_Tiny"], [1, "SID_PackHowl"]]
+            },
+            
+            {
+                "pid"       : "PID_オルテンシア",
+                "english"   : "Hortensia",
+                "skills"    : [[1, "SID_UnicornMaiden"], [24, "SID_Careful"], [30, "SID_StayWinning"]]
+            },
+            
+            {
+                "pid"       : "PID_セアダス",
+                "english"   : "Seadall",
+                "skills"    : [[1, "SID_Magnificent"], [17, "SID_Leap"], [21, "SID_CoverForMe"]]
+            },
+            
+            {
+                "pid"       : "PID_ロサード",
+                "english"   : "Rosado",
+                "skills"    : [[1, "SID_Glamour"], [24, "SID_Brutality"], [29, "SID_Stunning"]]
+            },
+            
+            {
+                "pid"       : "PID_ゴルドマリー",
+                "english"   : "Goldmary",
+                "skills"    : [[1, "SID_Twister"], [24, "SID_GlancingBlow"], [28, "SID_Deflection"]]
+            },
+            
+            {
+                "pid"       : "PID_リンデン",
+                "english"   : "Lindon",
+                "skills"    : [[1, "SID_Sensability"], [27, "SID_BattleExperience"], [32, "SID_WellRested"]]
+            },
+            
+            {
+                "pid"       : "PID_ザフィーア",
+                "english"   : "Saphir",
+                "skills"    : [[1, "SID_WillToWin"], [30, "SID_DeepArsenal"], [35, "SID_TeachingMoment"]]
+            },
+
+            {
+                "pid"       : "PID_ザフィーア",
+                "english"   : "Mauvier",
+                "skills"    : [[1, "SID_TargetPractice"], [18, "SID_FalseOpening"], [24, "SID_PlusOnBlock"]]
+            },
+            
+            {
+                "pid"       : "PID_ヴェイル",
+                "english"   : "Veyle",
+                "skills"    : [[1, "SID_OneChanceOnly"], [37, "SID_CursedDragon"], [40, "SID_Inception"]]
+            },
+            
+            {
+                "pid"       : "PID_エル",
+                "english"   : "Nel",
+                "skills"    : [[1, "SID_ブレイク時追撃"], [15, "SID_怒り"], [30, "SID_武士道"]]
+            },
+            
+            {
+                "pid"       : "PID_ラファール",
+                "english"   : "Rafal",
+                "skills"    : [[1, "SID_絆の指輪_アルフォンス"], [15, "SID_防陣"], [30, "SID_滅殺"]]
+            },
+            
+            {
+                "pid"       : "PID_セレスティア",
+                "english"   : "Zelestia",
+                "skills"    : [[1, "SID_神竜の加護"], [15, "SID_復帰阻止"], [30, "SID_ダイムサンダ"]]
+            },
+            
+            {
+                "pid"       : "PID_グレゴリー",
+                "english"   : "Gregory",
+                "skills"    : [[1, "SID_重撃"], [15, "SID_力まかせ"], [30, "SID_必的"]]
+            },
+
+            {
+                "pid"       : "PID_マデリーン",
+                "english"   : "Madeline",
+                "skills"    : [[1, "SID_限界突破"], [15, "SID_伝道師"], [30, "SID_閃花"]]
+            }
+
+        ]
+
+}

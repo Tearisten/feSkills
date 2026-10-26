@@ -1,5 +1,5 @@
 [package]
-name = "PersonalSkillsEnhanced"
+name = "PersonalSkillGrowth"
 version = "0.1.0"
 authors = []
 edition = "2021"
@@ -11,18 +11,45 @@ titleid = "01006A800016E000" # Smash Ultimate
 crate-type = ["cdylib"]
 
 [dependencies]
-skyline = {git = "https://github.com/ultimate-research/skyline-rs", rev = "ba4706a6faa1a705b37cc962826b0426d72bf604"}
-libc-nnsdk = { git = "https://github.com/ultimate-research/libc-nnsdk", rev = "c83d92a930852db6028442dbba930aa14012172c"}
-unity = { git = "https://github.com/DivineDragonFanClub/unity"}
-engage = { git = "https://github.com/DivineDragonFanClub/engage", rev = "c192434d5c7b313f400245a0d08c65252ce3b1d7"}
-serde = { version = "1.0", features = ["derive"] }
-toml = "0.8.0"
-num = "0.4.1"
+engage-il2cpp = { git = "https://github.com/DivineDragonFanClub/engage-il2cpp", tag = "0.1.2" , features = [
+    "app-basicmenu",
+    "app-capabilitybase_1",
+    "app-force",
+    "app-gamemessage",
+    "app-gameuserdata",
+    "app-hubaccess",
+    "app-hubplaytalk",
+    "app-hubplaytalkafter",
+    "app-hubutil",
+    "app-jobdata",
+    "app-levelupsequnece",
+    "app-mess",
+    "app-muscle_exercise-level",
+    "app-myroomreliancesubselect",
+    "app-persondata",
+    "app-proc",
+    "app-procinst",
+    "app-reliancedata",
+    "app-singletonclass_1",
+    "app-skilldata",
+    "app-structbase",
+    "app-structdata_1",
+    "app-unit",
+    "app-unitpool",
+    "app-unitreliance",
+    "system-collections-generic-dictionary_2",
+    "system-collections-generic-list_1",
+    "system-object",
+] }
+skyline = "0.6.0"
+unity-nx = { git = "https://github.com/DivineDragonFanClub/unity-nx", tag = "0.1.2" }
+cobapi = { git = "https://github.com/DivineDragonFanClub/cobapi", tag = "0.1.3" }
+hex = "0.4.3"
 miniserde = "0.1.41"
-lazy_static = "1.4.0"
 
 [profile.dev]
 panic = "abort"
 
 [profile.release]
 panic = "abort"
+lto = true
